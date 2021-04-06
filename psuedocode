@@ -1,0 +1,15 @@
+// 1. Object comes into existence, waiting for nothing
+// 2. Thread registers but has not arrived yet. "I am going to wait on youe eventually."
+// 3. Count of number of threads to wait for increments
+// 4. Count of number of threads waiting is still 0
+// 5. Repeat steps 2,3,4 for each thread
+// 6. A thread arrives  "I am waiting on you now"
+// 7. Number of threads waiting increments
+// 8. Number of threads to wait for stays the same
+// 9. Is number of threads waiting >= number of threads to wait for?
+// 10. Yes: release all threads.  Number of threads waiting = 0
+// 11. No: newly arrived thread blocks  
+// 12. Repeat 6 through 11
+
+// Questions:  What if a thread dies and does not unregister (Pathological case)
+
